@@ -137,6 +137,12 @@ static KeyBinding bindings[] = {
 	{ { MOD, 'v', '0'      }, { view,           { NULL }                    } },
 	{ { MOD, 'v', '\t',    }, { viewprevtag,    { NULL }                    } },
 	{ { MOD, 't', '0'      }, { tag,            { NULL }                    } },
+	{ { CTRL('j')          }, { focusnext,      { NULL }                    } },
+	{ { MOD, CTRL('j')     }, { send,           { (const char[]){CTRL('j'),0} } } },
+	{ { CTRL('k')          }, { focusprev,      { NULL }                    } },
+	{ { MOD, CTRL('k')     }, { send,           { (const char[]){CTRL('k'),0} } } },
+	{ { CTRL('a')          }, { togglerunall,   { NULL }                    } },
+	{ { MOD, CTRL('a')     }, { send,           { (const char[]){CTRL('a'),0} } } },
 	TAGKEYS( '1',                              0)
 	TAGKEYS( '2',                              1)
 	TAGKEYS( '3',                              2)
