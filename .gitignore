@@ -3,3 +3,6 @@
 /dvtm-editor
 *.css
 *.html
+/log
+/debug
+/patches
