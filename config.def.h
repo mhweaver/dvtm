@@ -148,6 +148,10 @@ static KeyBinding bindings[] = {
 	TAGKEYS( '3',                              2)
 	TAGKEYS( '4',                              3)
 	TAGKEYS( '5',                              4)
+	TAGKEYS( '6',                              5)
+	TAGKEYS( '7',                              6)
+	TAGKEYS( '8',                              7)
+	TAGKEYS( '9',                              8)
 };
 
 static const ColorRule colorrules[] = {
