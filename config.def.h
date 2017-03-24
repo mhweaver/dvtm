@@ -48,7 +48,7 @@ static Color colors[] = {
 /* printf format string for the tag in the status bar */
 #define TAG_SYMBOL   " %s "
 #define TAG_SEP      "|"
-#define LAYOUT_SEP   ":: "
+#define LAYOUT_SEP   "  "
 /* curses attributes for the currently selected tags */
 #define TAG_SEL      (COLOR(BLUE) | A_BOLD)
 /* curses attributes for not selected tags which contain no windows */
@@ -91,10 +91,10 @@ static KeyBinding bindings[] = {
 	{ { MOD, 'H',          }, { focusleft,      { NULL }                    } },
 	{ { MOD, 'L',          }, { focusright,     { NULL }                    } },
 	{ { MOD, 'k',          }, { focusprev,      { NULL }                    } },
-	{ { MOD, 'f',          }, { setlayout,      { "[]=" }                   } },
-	{ { MOD, 'g',          }, { setlayout,      { "+++" }                   } },
-	{ { MOD, 'b',          }, { setlayout,      { "TTT" }                   } },
-	{ { MOD, 'm',          }, { setlayout,      { "[ ]" }                   } },
+	{ { MOD, 'f',          }, { setlayout,      { "│├┤" }                   } },
+	{ { MOD, 'g',          }, { setlayout,      { "├┼┤" }                   } },
+	{ { MOD, 'b',          }, { setlayout,      { "├┬┤" }                   } },
+	{ { MOD, 'm',          }, { setlayout,      { "│ │" }                   } },
 	{ { MOD, ' ',          }, { setlayout,      { NULL }                    } },
 	{ { MOD, 'i',          }, { incnmaster,     { "+1" }                    } },
 	{ { MOD, 'd',          }, { incnmaster,     { "-1" }                    } },
@@ -198,7 +198,7 @@ static const ColorRule colorrules[] = {
 #ifdef CONFIG_MOUSE
 static Button buttons[] = {
 	{ BUTTON1_CLICKED,        { mouse_focus,      { NULL  } } },
-	{ BUTTON1_DOUBLE_CLICKED, { mouse_fullscreen, { "[ ]" } } },
+	{ BUTTON1_DOUBLE_CLICKED, { mouse_fullscreen, { "│ │" } } },
 	{ BUTTON2_CLICKED,        { mouse_zoom,       { NULL  } } },
 	{ BUTTON3_CLICKED,        { mouse_minimize,   { NULL  } } },
 };
