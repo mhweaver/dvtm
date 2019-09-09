@@ -408,6 +408,7 @@ show_border(void) {
 	return (bar.pos != BAR_OFF) || (clients && clients->next);
 }
 
+static char *getcwd_by_pid(Client *c);
 static void
 draw_border(Client *c) {
 	char t = '\0';
@@ -431,10 +432,11 @@ draw_border(Client *c) {
 		c->title[maxlen] = '\0';
 	}
 
-	mvwprintw(c->window, 0, 2, "[%s%s#%d]",
+	mvwprintw(c->window, 0, 2, "[%s%s#%d | %s]",
 	          *c->title ? c->title : "",
 	          *c->title ? " | " : "",
-	          c->order);
+	          c->order,
+	          getcwd_by_pid(c));
 	if (t)
 		c->title[maxlen] = t;
 	wmove(c->window, y, x);
